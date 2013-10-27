@@ -11,7 +11,7 @@ run:
 	sbt run
 
 reload:
-	sbt reload update eclipse
+	sbt reload update-classifiers eclipse
 
 test:
 	sbt test
