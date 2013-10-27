@@ -15,9 +15,15 @@ libraryDependencies += "org.scalatest" % "scalatest_2.10" % "2.0.M8"
 
 libraryDependencies += "com.novocode" % "junit-interface" % "0.10" % "test"
 
+libraryDependencies += "org.jsoup" % "jsoup" % "1.7.2"
+
+libraryDependencies += "net.liftweb" % "lift-common_2.10" % "2.5"
+
 // Read here for optional dependencies:
 // http://etorreborre.github.com/specs2/guide/org.specs2.guide.Runners.html#Dependencies
- 
-testOptions in Test += Tests.Argument("junitxml", "html", "console")
- 
 
+testOptions in Test += Tests.Argument(TestFrameworks.Specs2, "sequential", "true")
+
+testOptions in Test += Tests.Argument(TestFrameworks.Specs2, "junitxml","html","console")
+
+testOptions in Test += Tests.Argument(TestFrameworks.ScalaTest, "junitxml(directory=\"target/test-reports\")")
