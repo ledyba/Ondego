@@ -1,7 +1,9 @@
 name := "Ondego"
- 
+
 version := "1.0"
- 
+
+organization="org.ledyba"
+
 scalaVersion := "2.10.3"
 
 resolvers ++= Seq(
