@@ -10,7 +10,7 @@ import org.jsoup.nodes.Document
 object Html{
 	def parse( src : String ) : Box[Document] = {
 		try {
-			return Box(Jsoup.parse(src));
+			return Box !! (Jsoup.parse(src));
 		} catch {
 			case x:Throwable => return Failure(x.toString());
 		}
